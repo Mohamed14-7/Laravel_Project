@@ -33,7 +33,8 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $product = Product::findOrFail($id);
-        return view('admin.products.edit', compact('product', 'categories'));
+        $category_name = Category::where('id', $product->category_id)->first()->name;
+        return view('admin.products.edit', compact('product', 'categories', 'category_name'));
     }
     public function update(Request $request, $id)
     {

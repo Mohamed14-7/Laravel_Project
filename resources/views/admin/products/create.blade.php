@@ -18,10 +18,9 @@
         <label for="category" class="form-label">الصنف</label>
         <select class="form-control" name="category" id="category">
             <option value="#"></option>
-            <option value="1">الملابس</option>
-            <option value="2">أحذية</option>
-            <option value="3">أكسسوارات</option>
-
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
         </select>
     </div>
     <div class="mb-3">
