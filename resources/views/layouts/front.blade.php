@@ -180,8 +180,6 @@
                                 الرئيسية</a>
                         </li>
                     </ul>
-                    <a class="nav-link active text-light" aria-current="page" href="{{ url('back') }}">The
-                        Back-end</a>
                 </div>
             </div>
         </nav>

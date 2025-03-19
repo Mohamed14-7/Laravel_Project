@@ -1,7 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-    <a href="{{ url('categories/create/') }}" class="btn btn-secondary">أضف صنف جديد</a>
-
     <table class="table">
         <thead>
             <tr>

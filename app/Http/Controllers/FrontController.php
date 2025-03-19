@@ -10,10 +10,8 @@ class FrontController extends Controller
 {
     public function index(Request $request)
     {
-        // Get all categories
-        $categories = Category::all();
 
-        // Filter products based on selected category
+        $categories = Category::all();
         $categoryId = $request->input('category_id');
         if ($categoryId) {
             $products = Product::where('category_id', $categoryId)->get();
