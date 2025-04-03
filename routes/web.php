@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('products', [ProductController::class, 'index']);
 Route::get('products/create', [ProductController::class, 'create']);
@@ -20,3 +21,7 @@ Route::patch('categories/update/{id}', [CategoryController::class, 'update']);
 Route::get('categories/delete/{id}', [CategoryController::class, 'destroy']);
 
 Route::get('/', [FrontController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
